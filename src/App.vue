@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <button v-for="item of webpage" @click="gotopage(item.path)">{{item.title}}</button>
+      <router-view></router-view>
   </div>
 </template>
 <script>
@@ -8,12 +8,7 @@ export default {
   name: 'app',
   data () {
     return {
-      webpage:[
-        {
-          path:'/verify',
-          title:"验证"
-        }
-      ]
+     
     }
   },
   methods:{

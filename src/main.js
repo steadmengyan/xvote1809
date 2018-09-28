@@ -5,14 +5,23 @@ import Vuex from 'vuex'
 import "babel-polyfill"
 Vue.use(Vuex)
 Vue.use(VueRouter)
-const Verify = require('./components/verify/verify.vue')// 验证
+const Idx = require('./components/idx/idx.vue')// 首页  
+const Verify = require('./components/verify/verify.vue')// 验证  
+const Activities = require('./components/activities/activities.vue')// 活动页面
 const router = new VueRouter({
   routes:[
     {
+      path:'/idx',
+      component:Idx.default,
+    },
+    {
       path:'/verify',
       component:Verify.default,
-      name:"验证"
-    }
+    },
+    {
+      path:'/activities',
+      component:Activities.default,
+    },
   ]
 })
 const store = new Vuex.Store({
