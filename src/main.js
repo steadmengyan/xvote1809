@@ -11,6 +11,8 @@ const Activities = require('./components/activities/activities.vue')// 活动页
 const Xverify = require('./components/verify/verify.vue')// 投票验证
 const Xcurator = require('./components/xcurator/xcurator.vue')// 策展人
 const Xsuccess = require('./components/xsuccess/xsuccess.vue')// 验证成功
+const Judge = require('./components/judge/judge.vue')// 终极评委
+const Explain = require('./components/explain/explain.vue')// 投票说明
 const router = new VueRouter({
   routes:[
     {
@@ -37,6 +39,16 @@ const router = new VueRouter({
       path:'/xsuccess',
       component:Xsuccess.default,
       name:"验证成功"
+    },
+    {
+      path:'/judge',
+      component:Judge.default,
+      name:"终极评委"
+    },
+    {
+      path:'/explain',
+      component:Explain.default,
+      name:"投票说明"
     }
   ]
 })

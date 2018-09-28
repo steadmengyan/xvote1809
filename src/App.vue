@@ -29,6 +29,14 @@ export default {
         },{
           path:'/activities',
           title:"活动"
+        },
+        {
+          path:'/judge',
+          title:"终极评委 "
+        },
+        {
+          path:'/explain',
+          title:"投票说明 "
         }
       ]
     }
