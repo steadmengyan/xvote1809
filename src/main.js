@@ -8,6 +8,9 @@ Vue.use(VueRouter)
 const Idx = require('./components/idx/idx.vue')// 首页  
 const Verify = require('./components/verify/verify.vue')// 验证  
 const Activities = require('./components/activities/activities.vue')// 活动页面
+const Xverify = require('./components/verify/verify.vue')// 投票验证
+const Xcurator = require('./components/xcurator/xcurator.vue')// 策展人
+const Xsuccess = require('./components/xsuccess/xsuccess.vue')// 验证成功
 const router = new VueRouter({
   routes:[
     {
@@ -22,6 +25,19 @@ const router = new VueRouter({
       path:'/activities',
       component:Activities.default,
     },
+    {
+      path:'/xverify',
+      component:Xverify.default,
+      name:"验证"
+    },{
+      path:'/xcurator',
+      component:Xcurator.default,
+      name:"策展人"
+    },{
+      path:'/xsuccess',
+      component:Xsuccess.default,
+      name:"验证成功"
+    }
   ]
 })
 const store = new Vuex.Store({
